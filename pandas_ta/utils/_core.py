@@ -4,14 +4,14 @@ from pathlib import Path
 from sys import float_info as sflt
 
 from numpy import argmax, argmin
-from numpy import NaN as npNaN
+from numpy import nan as npNaN
 from pandas import DataFrame, Series
 from pandas.api.types import is_datetime64_any_dtype
 
 
 def _camelCase2Title(x: str):
     """https://stackoverflow.com/questions/5020906/python-convert-camel-case-to-space-delimited-using-regex-and-taking-acronyms-in"""
-    return re_.sub("([a-z])([A-Z])","\g<1> \g<2>", x).title()
+    return re_.sub(r"([a-z])([A-Z])", r"\g<1> \g<2>", x).title()
 
 
 def category_files(category: str) -> list:

@@ -16,7 +16,7 @@ setup(
         "pandas_ta.trend",
         "pandas_ta.utils",
         "pandas_ta.volatility",
-        "pandas_ta.volume"
+        "pandas_ta.volume",
     ],
     version=".".join(("0", "2", "67b")),
     description=long_description,
@@ -50,15 +50,23 @@ setup(
     package_data={
         "data": ["data/*.csv"],
     },
-    install_requires=["pandas"],
+    install_requires=["pandas", "setuptools", "packaging"],
     # List additional groups of dependencies here (e.g. development dependencies).
     # You can install these using the following syntax, for example:
     # $ pip install -e .[dev,test]
     extras_require={
         "dev": [
-            "alphaVantage-api", "matplotlib", "mplfinance", "scipy",
-            "sklearn", "statsmodels", "stochastic",
-            "talib", "tqdm", "vectorbt", "yfinance",
+            "alphaVantage-api",
+            "matplotlib",
+            "mplfinance",
+            "scipy",
+            "sklearn",
+            "statsmodels",
+            "stochastic",
+            "talib",
+            "tqdm",
+            "vectorbt",
+            "yfinance",
         ],
         "test": ["ta-lib"],
     },
